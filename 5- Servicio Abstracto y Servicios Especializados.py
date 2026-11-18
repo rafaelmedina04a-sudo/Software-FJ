@@ -1,5 +1,5 @@
 # =====================================================================
-# 4. SERVICIO ABSTRACTO Y SERVICIOS ESPECIALIZADOS
+# 4. SERVICIO ABSTRACTO Y SERVICIOS ESPECIALIZADO
 # =====================================================================
 class Servicio(Entidad):
     _contador = count(1)
