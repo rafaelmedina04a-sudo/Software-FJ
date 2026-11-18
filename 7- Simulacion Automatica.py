@@ -1,5 +1,5 @@
 # =====================================================================
-# 6. SIMULACIÓN AUTOMÁTICA (18 operaciones, independiente de la pantalla)
+# 6. SIMULACIÓN AUTOMÁTICA (18 operaciones, independiente de la pantalla.)
 # =====================================================================
 def simulacion_demo(emit):
     """Ejecuta 18 operaciones válidas e inválidas; 'emit' recibe cada línea de salida."""
