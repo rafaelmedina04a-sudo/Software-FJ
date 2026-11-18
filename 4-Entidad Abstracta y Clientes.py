@@ -1,5 +1,5 @@
 # =====================================================================
-# 3. ENTIDAD ABSTRACTA Y CLIENTE
+# 3. ENTIDAD ABSTRACTA Y CLIENT
 # =====================================================================
 class Entidad(ABC):
     """Clase abstracta para cualquier entidad general del sistema.
