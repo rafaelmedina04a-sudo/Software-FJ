@@ -19,6 +19,30 @@ python main.py              # abre la interfaz gráfica
 python main.py --consola    # ejecuta la simulación de 18 operaciones en la terminal
 ```
 
+### Dos formas de ejecución
+
+| Comando | Qué hace |
+|---|---|
+| `python main.py` | Abre la **interfaz gráfica** (Tkinter), sin argumentos. |
+| `python main.py --consola` | Ejecuta la **simulación de consola** de 18 operaciones (válidas e inválidas) e imprime el resultado en la terminal. |
+
+Las evidencias de ejecución (salida de consola y contenido del log) se toman con
+`python main.py --consola`.
+
+## Registro de eventos (logs)
+
+Cada ejecución escribe en `logs/software_fj.log` (la carpeta se crea sola). El archivo registra
+altas de clientes y servicios, creación, confirmación y procesamiento de reservas, y todos los
+errores controlados con su causa. Ejemplo de líneas:
+
+```
+INFO     | Cliente registrado: Ana Pérez (doc 1012345678)
+ERROR    | Cliente no creado: Email inválido: 'carlos-sin-arroba'
+ERROR    | Demo 18 'Reserva con cliente nulo' falló: La reserva requiere un Cliente válido
+```
+
+La carpeta `logs/` está en `.gitignore`: el log se genera al ejecutar y no se sube al repositorio.
+
 ## Estructura del proyecto
 
 | Archivo | Contenido |
@@ -66,13 +90,22 @@ El IVA por defecto es 19 %.
 `Pendiente` → `Confirmada` → `Procesada`. Una reserva puede cancelarse mientras no esté
 procesada o cancelada.
 
-## Integrantes
+## Integrantes y aportes
 
-- Josué Ruiz Ortega
-- Jesus David Durango
-- Rafael Angel Medina
-- Sandri Paola Martinez
+| Integrante | Qué desarrolló | Rama | Pull request |
+|---|---|---|---|
+| Rafael Medina | ( excepciones.py) | (rafael-excepciones) | (#) |
+| Josue  Ruiz   | Programa original en un solo archivo y reorganización en módulos | `reorganizar-modulos` | (#) |
+| Jesus Durango | (registro) | (rama) | (#) |
+| Sandri Martinez | (Entidades) | (rama) | (#) |
+| Jesus quintero| (Servicios) | (rama) | (#) |
+
+La reorganización final en módulos (`excepciones.py`, `registro.py`, `entidades.py`, `servicios.py`,
+`reservas.py`, `simulacion.py`, `interfaz.py` y `main.py`) se integró desde la rama
+`reorganizar-modulos`. Los aportes previos de cada integrante (fragmentos iniciales, ramas y
+pull requests #7 y #8) están en el historial de commits del repositorio.
 
 ## Flujo de trabajo
 
-Cada integrante trabaja en una rama propia y los cambios se integran a `main` mediante pull requests.
+Cada integrante trabaja en una rama propia y los cambios se integran a `main` mediante pull requests,
+con mensajes de commit que describen lo que se hizo.
