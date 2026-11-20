@@ -94,7 +94,7 @@ procesada o cancelada.
 
 | Integrante | Qué desarrolló | Rama | Pull request |
 |---|---|---|---|
-| Rafael Medina | ( excepciones.py) | (rafael-excepciones) | (#) |
+| Rafael Medina | ( excepciones.py) | (rafael-excepciones) | (9) |
 | Josue  Ruiz   | Programa original en un solo archivo y reorganización en módulos | `reorganizar-modulos` | (#) |
 | Jesus Durango | (registro) | (rama) | (#) |
 | Sandri Martinez | (Entidades) | (rama) | (#) |
