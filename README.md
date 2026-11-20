@@ -68,8 +68,10 @@ procesada o cancelada.
 
 ## Integrantes
 
-- Josué
-- (Agregar los nombres de los demás integrantes del equipo)
+- Josué Ruiz Ortega
+- Jesus David Durango
+- Rafael Angel Medina
+- Sandri Paola Martinez
 
 ## Flujo de trabajo
 
