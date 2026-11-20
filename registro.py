@@ -1,6 +1,7 @@
-# =====================================================================
-# 1. LOGGING
-# =====================================================================
+"""Configuración del log (archivo logs/software_fj.log)."""
+import logging
+from pathlib import Path
+
 RUTA_LOG = Path(__file__).parent / "logs" / "software_fj.log"
 
 

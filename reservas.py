@@ -1,6 +1,14 @@
-# =====================================================================
-# 5. RESERVA
-# =====================================================================
+"""Estados y clase Reserva."""
+from enum import Enum
+from itertools import count
+
+from entidades import Cliente, Entidad
+from excepciones import (ErrorSoftwareFJ, OperacionNoPermitidaError,
+                         ReservaInvalidaError, ServicioNoDisponibleError)
+from registro import log
+from servicios import Servicio
+
+
 class Estado(Enum):
     PENDIENTE = "Pendiente"
     CONFIRMADA = "Confirmada"

@@ -1,6 +1,15 @@
-# =====================================================================
-# 7. INTERFAZ GRÁFICA
-# =====================================================================
+"""Interfaz gráfica (Tkinter) de Software FJ."""
+import tkinter as tk
+from tkinter import messagebox, ttk
+
+from entidades import Cliente
+from excepciones import (ErrorSoftwareFJ, OperacionNoPermitidaError,
+                         ParametroFaltanteError, ReservaInvalidaError)
+from registro import RUTA_LOG, log
+from reservas import Reserva
+from servicios import Asesoria, AlquilerEquipo, ReservaSala
+from simulacion import simulacion_demo
+
 COLOR_OK, COLOR_ERR = "#1b7f3b", "#b3261e"
 
 
@@ -380,17 +389,3 @@ class App(tk.Tk):
                 tv.selection_set(sel[0])
         self.r_cli["values"] = [f"{c.id} - {c.nombre}" for c in self.clientes]
         self.r_srv["values"] = [f"{s.id} - {s.nombre} ({s.TIPO})" for s in self.servicios]
-
-
-def main():
-    try:
-        app = App()
-    except tk.TclError as e:
-        log.critical("No se pudo abrir la ventana: %s", e)
-        print("No se pudo abrir la interfaz gráfica (¿entorno sin pantalla?):", e)
-        return
-    app.mainloop()
-
-
-if __name__ == "__main__":
-    main()

@@ -1,6 +1,5 @@
-# =====================================================================
-# 2. EXCEPCIONES PERSONALIZADAS
-# =====================================================================
+"""Excepciones personalizadas de Software FJ."""
+
 class ErrorSoftwareFJ(Exception):
     """Excepción base del sistema."""
 
@@ -31,6 +30,3 @@ class OperacionNoPermitidaError(ErrorSoftwareFJ):
 
 class CalculoInconsistenteError(ErrorSoftwareFJ):
     """El cálculo de costos produjo un resultado inconsistente."""
-
-
-

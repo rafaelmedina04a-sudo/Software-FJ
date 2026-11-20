@@ -1,6 +1,11 @@
-# =====================================================================
-# 6. SIMULACIÓN AUTOMÁTICA (18 operaciones, independiente de la pantalla.)
-# =====================================================================
+"""Simulación automática de 18 operaciones válidas e inválidas."""
+from entidades import Cliente
+from excepciones import ErrorSoftwareFJ
+from registro import log
+from reservas import Reserva
+from servicios import Asesoria, AlquilerEquipo, ReservaSala
+
+
 def simulacion_demo(emit):
     """Ejecuta 18 operaciones válidas e inválidas; 'emit' recibe cada línea de salida."""
     log.info("=== Inicio de simulación automática ===")

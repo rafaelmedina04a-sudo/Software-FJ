@@ -1,6 +1,12 @@
-# =====================================================================
-# 3. ENTIDAD ABSTRACTA Y CLIENTES
-# =====================================================================
+"""Entidad abstracta y Cliente."""
+import re
+from abc import ABC, abstractmethod
+from itertools import count
+
+from excepciones import ClienteInvalidoError
+from registro import log
+
+
 class Entidad(ABC):
     """Clase abstracta para cualquier entidad general del sistema.
     El id se asigna solo cuando la entidad se crea con éxito (sin saltos)."""

@@ -1,6 +1,13 @@
-# =====================================================================
-# 4. SERVICIO ABSTRACTO Y SERVICIOS ESPECIALIZADOS
-# =====================================================================
+"""Servicio abstracto y servicios especializados."""
+from abc import abstractmethod
+from itertools import count
+
+from entidades import Entidad
+from excepciones import (CalculoInconsistenteError, ParametroFaltanteError,
+                         ServicioInvalidoError)
+from registro import log
+
+
 class Servicio(Entidad):
     _contador = count(1)
     IVA_DEFECTO = 0.19
@@ -148,4 +155,3 @@ class Asesoria(Servicio):
 
     def detalle(self):
         return f"nivel {self._nivel}"
-
